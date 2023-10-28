@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+    app:
+        image: php:8.2-fpm-alpine
+        volumes:
+            - .:/srv/app
+        working_dir: /srv/app
+        networks:
+            - default
+        command: php -S localhost:80
